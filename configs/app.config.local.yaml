@@ -1,0 +1,47 @@
+# TO_CHANGE: Change the application configuration for local env based on your service
+PORT: 3060
+
+DB:
+  HOST: localhost
+  PORT: 3306
+  NAME: go_template_development
+  USER: root
+  PASSWORD:
+  MAX_IDLE_CONNS: 8
+  MAX_OPEN_CONNS: 16
+  MAX_LIFETIME_CONNS: 10
+
+REDIS:
+  HOST: localhost:6379
+  NAME: 0
+  PASSWORD:
+
+AWS:
+  ACCESS_KEY:
+  SECRET_KEY:
+  REGION: ap-southeast-1
+  ENDPOINT: "http://localhost:4566"
+
+DATADOG:
+  NAMESPACE:
+  SERVICE_NAME: go-repository-template
+  SERVICE_ENV: local
+  HOST: localhost:8125
+  UNIT: qoala
+
+SENTRY:
+  DSN:
+
+API_DOC:
+  SCHEMA_FILE_PATH: "./docs/swagger/swagger.yaml"
+
+SLACK:
+  WEBHOOK_URL: # TO_CHANGE: Input your webhook url slack for panic alert
+
+SQS:
+  ADD_PRODUCT:
+      NAME: "add-product"
+      NUMBER_RETRIEVE_MESSAGE: 5
+      WAIT_TIME_SECOND: 3
+      VISIBILITY_TIMEOUT: 30
+      WORKER_POOL: 1
